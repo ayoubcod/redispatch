@@ -1,0 +1,260 @@
+<!-- modules.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Module Catalog | REdispatch Engine</title>
+  <meta name="description" content="Browse the full suite of REdispatch engineering modules, including Solar PV, BESS, PtX, and Grid Dispatch specifications." />
+  <link rel="canonical" href="https://redispatchengine.com/modules.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redispatchengine.com/modules.html" />
+  <meta property="og:title" content="Technical Module Catalog | REdispatch" />
+  <meta property="og:description" content="Technical specifications and documentation for modular energy system engineering components." />
+  <meta property="og:image" content="https://redispatchengine.com/assets/img/thumbnail.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="REdispatch Module Catalog" />
+  <meta name="twitter:description" content="Explore modular engineering specifications for renewable energy systems." />
+  <meta name="twitter:image" content="https://redispatchengine.com/assets/img/thumbnail.png" />
+
+  <link rel="icon" type="image/png" href="assets/img/thumbnail.png" />
+  <link rel="apple-touch-icon" href="assets/img/thumbnail.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  <meta name="theme-color" content="#1a1a1a" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <div class="brand-logo-container">
+          <img src="assets/img/thumbnail.png" alt="REdispatch Logo" class="brand-logo" />
+        </div>
+        <div class="brand-text">REdispatch</div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <div class="hamburger"></div>
+      </button>
+
+      <nav class="nav">
+        <a class="nav-link" href="/index.html">Home</a>
+        <a class="nav-link active" href="/modules.html">Modules</a>
+        <a class="nav-link" href="/methods.html">Methods</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <a class="nav-btn active" href="contact.html">Connect</a>
+        </nav>
+    </div>
+  </header>
+
+  <main class="catalog-layout">
+    <aside class="catalog-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-title">Categories</div>
+        <a href="#power" class="sidebar-link active">Power & Dispatch</a>
+        <a href="#ptx" class="sidebar-link">PtX & Molecules</a>
+        <a href="#pipeline" class="sidebar-link">Future Pipeline</a>
+      </div>
+    </aside>
+
+    <div class="catalog-content">
+      <div class="catalog-header">
+        <h1>Module Catalog</h1>
+        <p>A strictly versioned suite of deterministic engines. Each module functions as a standalone black-box-free calculator.</p>
+      </div>
+
+      <section id="power" class="catalog-section">
+        <h2 class="section-title">Power & Dispatch</h2>
+        <div class="spec-card featured-spec">
+          <div class="spec-header">
+            <div class="spec-id-group">
+              <span class="spec-code">RDX-DF</span>
+              <span class="status-badge live">v1.0.0 Built</span>
+            </div>
+            <h3>Dispatch & Finance</h3>
+          </div>
+          <div class="spec-body">
+            <p class="spec-summary">Deterministic hourly dispatch of Solar/Wind/BESS/Grid for one representative year, coupled with post-dispatch financial modeling.</p>
+            <div class="spec-grid">
+              <div class="spec-col">
+                <h4>Core Scope</h4>
+                <ul class="spec-list">
+                  <li>Hourly dispatch (RE → Load → BESS → Grid)</li>
+                  <li>Explicit curtailment & export logic</li>
+                  <li>LCOE computed strictly on energy served</li>
+                </ul>
+              </div>
+              <div class="spec-col">
+                <h4>The Hard Wall</h4>
+                <div class="hard-wall-box">No optimization. No forecasting.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ptx" class="catalog-section">
+        <h2 class="section-title">PtX & Molecules</h2>
+        <div class="spec-card">
+          <div class="spec-header">
+            <div class="spec-id-group">
+              <span class="spec-code">RDX-H2</span>
+              <span class="status-badge planned">Next Up</span>
+            </div>
+            <h3>PtX Hydrogen Dispatch</h3>
+          </div>
+          <div class="spec-body">
+            <p class="spec-summary">Converts electrical dispatch results into deterministic hourly H2 production and storage behavior.</p>
+            <div class="spec-grid">
+              <div class="spec-col">
+                <h4>Planned Scope</h4>
+                <ul class="spec-list">
+                  <li>Electrolyzer ramp limits & standby</li>
+                  <li>H2 tank constraints & compressor loads</li>
+                </ul>
+              </div>
+              <div class="spec-col">
+                <h4>The Hard Wall</h4>
+                <div class="hard-wall-box">No price-driven arbitrage.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline" class="catalog-section">
+        <div class="locked-catalog-box">
+          <div class="lock-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3>Custom Engine Development</h3>
+          <p>Beyond the core modules, we develop deterministic logic for specialized energy vectors, regional grid tariffs, and complex compliance frameworks.</p>
+          
+          <div class="locked-tags">
+            <span>Downstream PtX derivatives</span>
+            <span>Regional Tariff Engines</span>
+            <span>Regulatory Compliance Layers</span>
+            <span>Carbon Accounting Layers</span>
+          </div>
+
+          <div class="mt-4">
+            <a href="contact.html" class="btn btn-primary">Inquire About Custom Modules</a>
+          </div>
+        </div>
+      </section>
+
+
+
+    </div>
+  </main>
+
+  <footer class="section-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-text footer-brand">REdispatch</div>
+        <p class="footer-copy">
+          © <span id="year"></span>. A suite of deterministic engineering modules for energy systems.
+        </p>
+      </div>
+      
+      <div class="footer-right">
+        <div class="footer-nav-group">
+          <span class="footer-label">Connect</span>
+          <a href="mailto:your-email@example.com" class="footer-link">Email</a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+        <div class="footer-nav-group">
+          <span class="footer-label">Navigation</span>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="modules.html" class="footer-link">Catalog</a>
+          <a href="#" class="footer-link back-to-top">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Update Copyright Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // 2. Sidebar Active State Logic
+    const sections = document.querySelectorAll(".catalog-section");
+    const navLi = document.querySelectorAll(".sidebar-link");
+
+    window.addEventListener('scroll', () => {
+      let current = "";
+      
+      // A. Calculate if the user has reached the bottom of the page
+      const isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50;
+
+      if (isBottom) {
+        // If at the bottom, grab the ID of the very last section
+        current = sections[sections.length - 1].getAttribute("id");
+      } else {
+        // B. Standard Scroll Calculation
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          // 150px offset to trigger the change slightly before reaching the top
+          if (window.pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute("id");
+          }
+        });
+      }
+
+      // C. Update the UI
+      navLi.forEach((li) => {
+        li.classList.remove("active");
+        // Use an exact match check to prevent partial string matching issues
+        if (li.getAttribute("href") === `#${current}`) {
+          li.classList.add("active");
+        }
+      });
+    });
+
+    // 3. Dark Mode Toggle Logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!-- methods.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Methods & Specifications | REdispatch</title>
+  <meta name="description" content="Explore the deterministic engineering logic behind REdispatch. Detailed specifications for energy priority, BESS operations, and grid export." />
+  <link rel="canonical" href="https://redispatchengine.com/methods.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://redispatchengine.com/methods.html" />
+  <meta property="og:title" content="Engineering Methods & Logic | REdispatch" />
+  <meta property="og:description" content="Detailed engineering specifications for energy dispatch hierarchy and system modeling." />
+  <meta property="og:image" content="https://redispatchengine.com/assets/img/thumbnail.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="REdispatch Methods" />
+  <meta name="twitter:description" content="Deterministic dispatch logic and technical energy specifications." />
+  <meta name="twitter:image" content="https://redispatchengine.com/assets/img/thumbnail.png" />
+
+  <link rel="icon" type="image/png" href="assets/img/thumbnail.png" />
+  <link rel="apple-touch-icon" href="assets/img/thumbnail.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  <meta name="theme-color" content="#1a1a1a" />
+</head>
+
+
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-logo-container">
+          <img src="assets/img/thumbnail.png" alt="Logo" class="brand-logo" />
+        </div>
+        <div class="brand-text">REdispatch</div>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <div class="hamburger"></div>
+      </button>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="modules.html">Modules</a>
+        <a class="nav-link active" href="methods.html">Methods</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a class="nav-btn active" href="contact.html">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="catalog-layout">
+  <aside class="catalog-sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-status-pill">Active Module</div>
+      <div class="sidebar-title">RDX-DF: Dispatch & Finance</div>
+      <a href="#logic-principles" class="sidebar-link active">Operational Logic</a>
+      <a href="#dispatch-bess" class="sidebar-link">Battery Storage</a>
+      <a href="#finance-capex" class="sidebar-link">CAPEX & Scaling</a>
+      <a href="#finance-opex" class="sidebar-link">OPEX & Revenue</a>
+      <a href="#finance-lcoe" class="sidebar-link">LCOE & Discounting</a>
+      
+      <div class="sidebar-separator"></div>
+      
+      <div class="sidebar-title muted">Technical Pipeline</div>
+        <div class="sidebar-pipeline-info">
+          New methodologies are added to the catalog following rigorous deterministic validation and versioning.
+        </div>
+      <div class="sidebar-tag-pill">Continuous Development</div>
+    </div>
+  </aside>
+
+    <div class="catalog-content">
+      <header class="catalog-header">
+        <div class="hero-badge">Specification v1.0.0</div>
+        <h1>Methodology Hub</h1>
+        <p class="hero-lead">
+          Technical foundations for the REdispatch suite. Currently viewing <strong>RDX-DF</strong>: the foundational energy and financial engine.
+        </p>
+      </header>
+
+      <section id="logic-principles" class="catalog-section">
+        <h2 class="section-title">1. Operational Dispatch Logic</h2>
+        <p>REdispatch utilizes a <strong>deterministic, rule-based dispatch model</strong>. This ensures that results are consistent, auditable, and free from the non-transparency often found in optimization-based solvers.</p>
+        
+        <div class="hard-wall-box">
+          <strong>Plant OFF Safety:</strong> If the total available power (Renewables + Storage + Grid) cannot meet the minimum required threshold for a specific hour, the system is forced into an OFF state to protect industrial load integrity.
+        </div>
+
+        <div class="spec-card mt-4">
+          <div class="spec-header">
+            <h3>Standard Energy Priority</h3>
+          </div>
+          <div class="spec-body">
+            <p>During operational hours, energy is moved according to a strict hierarchy:</p>
+            <ol class="spec-list">
+              <li><strong>Direct Use:</strong> Renewable generation satisfies load immediately.</li>
+              <li><strong>Storage:</strong> Surplus energy is directed to charge the BESS.</li>
+              <li><strong>Monetization:</strong> Remaining surplus is exported to the grid.</li>
+              <li><strong>Curtailment:</strong> Excess power is clipped if all other sinks are full.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="dispatch-bess" class="catalog-section">
+        <h2 class="section-title">2. Battery Storage (BESS)</h2>
+        <p>The storage model accounts for round-trip efficiencies and degradation-based capacity derating. Charging is restricted to renewable surplus only (no grid-to-battery charging) to ensure high additionality and renewable integrity.</p>
+      </section>
+
+      <hr style="border: 0; border-top: 1px solid var(--border); margin: 80px 0;">
+
+      <section id="finance-capex" class="catalog-section">
+        <h2 class="section-title">3. CAPEX & Scaling</h2>
+        <p>Financial outputs are computed after the dispatch cycle is complete. CAPEX is modeled through two primary methodologies to reflect real-world market conditions:</p>
+        
+        <div class="spec-grid">
+          <div class="spec-card">
+            <div class="spec-body">
+              <h4>Linear Mode</h4>
+              <p class="spec-summary">Simple unit-cost scaling for standard asset sizing.</p>
+            </div>
+          </div>
+          <div class="spec-card">
+            <div class="spec-body">
+              <h4>Scale-Index Mode</h4>
+              <p class="spec-summary">Power-law scaling to model economies of scale for large-scale deployments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="finance-opex" class="catalog-section">
+        <h2 class="section-title">4. OPEX & Operational Revenue</h2>
+        <p>The model computes annual operating expenses including fixed O&M, transmission charges, and energy tariffs. Revenues from grid exports are treated as "negative OPEX," reducing the net operational burden of the project.</p>
+      </section>
+
+      <section id="finance-lcoe" class="catalog-section">
+        <h2 class="section-title">5. Discounting & LCOE</h2>
+        <p>REdispatch provides a full lifecycle financial view using end-of-year cash flow timing. The <strong>Levelized Cost of Energy (LCOE)</strong> is the primary KPI, computed by dividing the total discounted project costs by the total discounted <strong>served energy</strong>.</p>
+        
+        <div class="table-card mt-4">
+          <table>
+            <thead><tr><th>Financial Metric</th><th>Accounting Basis</th></tr></thead>
+            <tbody>
+              <tr><td>NPV</td><td>Discounted sparse cashflow schedule</td></tr>
+              <tr><td>LCOE</td><td>Net lifecycle cost / Total energy served</td></tr>
+              <tr><td>CRF</td><td>Standardized capital recovery factor</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="section-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand-text footer-brand">REdispatch</div>
+        <p class="footer-copy">
+          © <span id="year"></span>. A suite of deterministic engineering modules for energy systems.
+        </p>
+      </div>
+      
+      <div class="footer-right">
+        <div class="footer-nav-group">
+          <span class="footer-label">Connect</span>
+          <a href="mailto:your-email@example.com" class="footer-link">Email</a>
+          <a href="https://linkedin.com/in/your-profile" target="_blank" class="footer-link">LinkedIn</a>
+        </div>
+        <div class="footer-nav-group">
+          <span class="footer-label">Navigation</span>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="modules.html" class="footer-link">Catalog</a>
+          <a href="#" class="footer-link back-to-top">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Dynamic Copyright Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // 2. Sidebar Scroll-Spy (Active State) Logic
+    const sections = document.querySelectorAll(".catalog-section");
+    const navLi = document.querySelectorAll(".sidebar-link");
+    const sidebarContainer = document.querySelector('.sidebar-inner');
+    let lastActiveId = ""; 
+
+    window.addEventListener('scroll', () => {
+      let current = "";
+      
+      const isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 60;
+
+      if (isBottom && sections.length > 0) {
+        current = sections[sections.length - 1].getAttribute("id");
+      } else {
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          // Offset calculation to trigger active state earlier
+          if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+      }
+
+      if (current !== lastActiveId) {
+        lastActiveId = current;
+
+        navLi.forEach((li) => {
+          li.classList.remove("active");
+          
+          if (current && li.getAttribute("href") === `#${current}`) {
+            li.classList.add("active");
+
+            // Only auto-center the pill on mobile
+            if (window.innerWidth <= 900 && sidebarContainer) {
+              const linkOffset = li.offsetLeft;
+              const linkWidth = li.offsetWidth;
+              const containerWidth = sidebarContainer.offsetWidth;
+
+              // Use the container's native scrollTo
+              sidebarContainer.scrollTo({
+                left: linkOffset - (containerWidth / 2) + (linkWidth / 2),
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      }
+    }, { passive: true });
+
+    
+    // 3. Persistent Dark Mode Logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
