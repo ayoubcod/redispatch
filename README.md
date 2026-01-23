@@ -19,8 +19,15 @@ View the documentation at: [https://redispatchengine.com](https://redispatchengi
 - `/contact.html`: Connectivity and inquiry portal.
 - `/assets/`: CSS styles, branding images, and icons.
 
-## License
-This **website source code** is licensed under the MIT License. 
+## License & Copyright
+
+**Copyright © 2026 REdispatch Engine. All rights reserved.**
+
+This repository is public for transparency and version control purposes only. 
+**No license is granted** for the use, reproduction, or distribution of this 
+website's source code or its technical content. 
+
+Unauthorized copying of any files or content via any medium is strictly prohibited.
 
 **Note:** The engineering methodologies, dispatch logic, and technical specifications described on the site are shared for informational and educational purposes. No commercial licensing or paid support for the underlying modules is offered through this repository.
 
