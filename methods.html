@@ -59,36 +59,29 @@
   <main class="catalog-layout">
   <aside class="catalog-sidebar">
     <div class="sidebar-inner">
-      <div class="sidebar-status-pill">Active Module</div>
       <div class="sidebar-title">RDX-DF: Dispatch & Finance</div>
-      <a href="#logic-principles" class="sidebar-link active">Operational Logic</a>
-      <a href="#dispatch-bess" class="sidebar-link">Battery Storage</a>
-      <a href="#finance-capex" class="sidebar-link">CAPEX & Scaling</a>
-      <a href="#finance-opex" class="sidebar-link">OPEX & Revenue</a>
-      <a href="#finance-lcoe" class="sidebar-link">LCOE & Discounting</a>
-      
-      <div class="sidebar-separator"></div>
-      
-      <div class="sidebar-title muted">Technical Pipeline</div>
-        <div class="sidebar-pipeline-info">
-          New methodologies are added to the catalog following rigorous deterministic validation and versioning.
-        </div>
-      <div class="sidebar-tag-pill">Continuous Development</div>
+      <div class="sidebar-scroll">
+        <a href="#logic-principles" class="sidebar-link active">Operational Logic</a>
+        <a href="#dispatch-bess" class="sidebar-link">Battery Storage</a>
+        <a href="#finance-capex" class="sidebar-link">CAPEX & Scaling</a>
+        <a href="#finance-opex" class="sidebar-link">OPEX & Revenue</a>
+        <a href="#finance-lcoe" class="sidebar-link">LCOE & Discounting</a>
+      </div>
     </div>
   </aside>
 
     <div class="catalog-content">
       <header class="catalog-header">
-        <div class="hero-badge">Specification v1.0.0</div>
-        <h1>Methodology Hub</h1>
+        <div class="hero-badge">RDX-DF • Specification v1.0.0</div>
+        <h1>Dispatch & Finance Methodology</h1>
         <p class="hero-lead">
-          Technical foundations for the REdispatch suite. Currently viewing <strong>RDX-DF</strong>: the foundational energy and financial engine.
+          Technical methodology for <strong>RDX-DF (Dispatch & Finance)</strong> — the active module in the REdispatch suite.
         </p>
       </header>
 
       <section id="logic-principles" class="catalog-section">
         <h2 class="section-title">1. Operational Dispatch Logic</h2>
-        <p>REdispatch utilizes a <strong>deterministic, rule-based dispatch model</strong>. This ensures that results are consistent, auditable, and free from the non-transparency often found in optimization-based solvers.</p>
+        <p>RDX-DF implements a <strong>deterministic, rule-based dispatch model</strong>. This ensures that results are consistent, auditable, and free from the non-transparency often found in optimization-based solvers.</p>
         
         <div class="hard-wall-box">
           <strong>Plant OFF Safety:</strong> If the total available power (Renewables + Storage + Grid) cannot meet the minimum required threshold for a specific hour, the system is forced into an OFF state to protect industrial load integrity.
@@ -144,7 +137,7 @@
 
       <section id="finance-lcoe" class="catalog-section">
         <h2 class="section-title">5. Discounting & LCOE</h2>
-        <p>REdispatch provides a full lifecycle financial view using end-of-year cash flow timing. The <strong>Levelized Cost of Energy (LCOE)</strong> is the primary KPI, computed by dividing the total discounted project costs by the total discounted <strong>served energy</strong>.</p>
+        <p>RDX-DF provides a full lifecycle financial view using end-of-year cash flow timing. The <strong>Levelized Cost of Energy (LCOE)</strong> is the primary KPI, computed by dividing the total discounted project costs by the total discounted <strong>served energy</strong>.</p>
         
         <div class="table-card mt-4">
           <table>
