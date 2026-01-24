@@ -532,11 +532,19 @@ a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
 .catalog-sidebar { width: 240px; flex-shrink: 0; }
 
 .sidebar-inner {
-  position: sticky;
-  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-scroll {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.sidebar-scroll .sidebar-link {
+  display: block; 
 }
 
 .sidebar-separator {
