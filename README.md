@@ -17,7 +17,7 @@ View the documentation at: [https://redispatchengine.com](https://redispatchengi
 - `/modules.html`: Catalog of engineering modules.
 - `/methods.html`: Detailed deterministic logic and specifications.
 - `/contact.html`: Connectivity and inquiry portal.
-- `/assets/`: CSS styles, branding images, and icons.
+- `/assets/`: CSS styles, JavaScript, branding images, and icons.
 
 ## License & Copyright
 
